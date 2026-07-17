@@ -75,5 +75,20 @@
         }
       }
     }
+
+    &__song-link {
+      color: $white-color;
+      font-weight: bold;
+      text-decoration: underline;
+
+      .fa-spotify {
+        margin-right: 0.4rem;
+      }
+
+      &:hover {
+        color: $dark-blue-text;
+        text-decoration: underline;
+      }
+    }
   }
 }
