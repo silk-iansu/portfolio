@@ -35,7 +35,8 @@ a:hover {
 }
 
 .dark-blue-text {
-  color: $dark-blue-text !important;
+  color: var(--text-color) !important;
+  transition: color 0.3s ease;
 }
 
 .text-color-main {

@@ -1,0 +1,23 @@
+// THEME (Light / Dark)
+// Toggled via [data-theme="dark"] on <html>, set by src/scripts/themeToggle.js
+:root {
+  --bg-color: #{$white-color};
+  --text-color: #{$dark-blue-text};
+  --scrollbar-track: #f1f1f1;
+  --header-bg: rgba(255, 255, 255, 0.75);
+  --header-icon-color: #{$dark-blue-text};
+  --timeline-line: #{$light-grey};
+  --footer-bg: #{$dark-grey};
+  --footer-text: #{$white-color};
+}
+
+[data-theme="dark"] {
+  --bg-color: #{$dark-bg};
+  --text-color: #{$dark-text};
+  --scrollbar-track: #211f30;
+  --header-bg: rgba(20, 18, 31, 0.75);
+  --header-icon-color: #{$dark-text};
+  --timeline-line: #{$dark-grey-line};
+  --footer-bg: #{$dark-bg};
+  --footer-text: #{$dark-text};
+}

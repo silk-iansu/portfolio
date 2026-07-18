@@ -1,13 +1,7 @@
 #projects {
-  background-color: $white-color;
-  color: $dark-blue-text;
-  margin-top: -10rem;
-  padding-top: 15rem;
-
-  @include respond(tab-land) {
-    margin-top: 0;
-    padding-top: 5rem;
-  }
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   .project-wrapper {
     margin-bottom: 15rem;

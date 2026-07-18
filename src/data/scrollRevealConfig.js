@@ -44,6 +44,13 @@ export const targetElements = [
     },
   },
   {
+    element: ".experience-wrapper__item",
+    animation: {
+      delay: 500,
+      origin: window.innerWidth > 768 ? "left" : "bottom",
+    },
+  },
+  {
     element: ".project-wrapper__text",
     animation: {
       delay: 500,

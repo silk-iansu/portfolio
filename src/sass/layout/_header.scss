@@ -1,0 +1,82 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.6rem 5.6rem;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background-color 0.3s ease;
+
+  @include respond(phone) {
+    padding: 1.2rem $default-font-size;
+  }
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  &__icon {
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--header-icon-color);
+    opacity: 0.5;
+    transition: opacity 0.3s ease, color 0.3s ease;
+
+    &--sun {
+      opacity: 1;
+    }
+  }
+
+  &__track {
+    position: relative;
+    width: 4.4rem;
+    height: 2.4rem;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    border-radius: 999px;
+    background-image: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+  }
+
+  &__thumb {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background-color: $white-color;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+}
+
+[data-theme="dark"] .theme-toggle {
+  &__icon--sun {
+    opacity: 0.5;
+  }
+
+  &__icon--moon {
+    opacity: 1;
+  }
+
+  .theme-toggle__thumb {
+    transform: translateX(2rem);
+    background-color: $dark-grey;
+  }
+}

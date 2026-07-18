@@ -9,6 +9,11 @@ $light-grey: #d2d2d2;
 
 $dark-blue-text: #272341; // For Headings
 
+// DARK MODE
+$dark-bg: #14121f; // Desaturated near-black tint of $dark-blue-text's hue
+$dark-text: #f2f0fa; // ~18:1 contrast against $dark-bg
+$dark-grey-line: #3a3650; // Muted lift off $dark-bg, for the experience timeline
+
 // FONT SIZE
 $default-font-size: 1.6rem;
 $big-font-size: 4rem;
