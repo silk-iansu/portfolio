@@ -75,5 +75,211 @@
         }
       }
     }
+
+    &__spotify-embed {
+      margin-top: 1.6rem;
+
+      @include respond(tab-port-sm) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &__spotify-card {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      width: 100%;
+      max-width: 46rem;
+      padding: 1.6rem;
+      background-color: #181818;
+      border-radius: 1rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        Arial, sans-serif;
+
+      &[data-state="hidden"] {
+        display: none;
+      }
+
+      @include respond(phone) {
+        gap: 1.2rem;
+        padding: 1.2rem;
+      }
+    }
+
+    &__spotify-cover {
+      position: relative;
+      flex-shrink: 0;
+      width: 12rem;
+      height: 12rem;
+      border-radius: 0.4rem;
+      overflow: hidden;
+      background-color: #282828;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include respond(phone) {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+
+    &__spotify-cover-img {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__spotify-glyph {
+      width: 4.8rem;
+      height: 4.8rem;
+      fill: $white-color;
+
+      @include respond(phone) {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+    }
+
+    &__spotify-cover--has-image {
+      .about-wrapper__spotify-cover-img {
+        display: block;
+      }
+
+      .about-wrapper__spotify-glyph {
+        display: none;
+      }
+    }
+
+    &__spotify-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 0;
+      height: 12rem;
+    }
+
+    &__spotify-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    &__spotify-track {
+      color: $white-color;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 2.4rem;
+      margin-bottom: 0.4rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @include respond(phone) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
+    }
+
+    &__spotify-artist {
+      color: #b3b3b3;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @include respond(phone) {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+      }
+    }
+
+    &__spotify-status-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 0.8rem;
+    }
+
+    &__spotify-logo {
+      width: 2rem;
+      height: 2rem;
+      flex-shrink: 0;
+    }
+
+    &__spotify-status {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      color: #b3b3b3;
+
+      @include respond(phone) {
+        font-size: 1rem;
+      }
+
+      &--live {
+        color: #1db954;
+      }
+    }
+
+    &__spotify-progress {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    &__spotify-progress-track {
+      width: 100%;
+      height: 0.4rem;
+      background-color: #404040;
+      border-radius: 0.2rem;
+      overflow: hidden;
+      margin-bottom: 0.6rem;
+    }
+
+    &__spotify-progress-fill {
+      height: 100%;
+      width: 0%;
+      background-color: #535353;
+      border-radius: 0.2rem;
+
+      &--live {
+        background-color: #1db954;
+      }
+    }
+
+    &__spotify-times {
+      display: flex;
+      justify-content: space-between;
+      color: #a7a7a7;
+      font-size: 1.1rem;
+
+      @include respond(phone) {
+        font-size: 1rem;
+      }
+    }
+
+    &__spotify-offline {
+      display: none;
+      color: #b3b3b3;
+      font-size: 1.4rem;
+    }
+
+    &__spotify-card[data-state="offline"] {
+      .about-wrapper__spotify-details,
+      .about-wrapper__spotify-progress {
+        display: none;
+      }
+
+      .about-wrapper__spotify-offline {
+        display: block;
+      }
+    }
   }
 }
